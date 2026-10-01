@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCare AI - Health Assistant</title>
+
+    <link rel="stylesheet" href="ai-chat.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">🏥</div>
+
+            <div>
+                <h2>SmartCare AI</h2>
+                <span>Healthcare Assistant</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="nav-item">
+                🏠
+                <span>Dashboard</span>
+            </a>
+
+            <a href="ai-chat.html" class="nav-item active">
+                🤖
+                <span>AI Health Assistant</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                📅
+                <span>Appointments</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                📄
+                <span>Medical Records</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                💊
+                <span>Medicine Reminders</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                🚨
+                <span>Emergency Support</span>
+            </a>
+
+        </nav>
+
+        <button id="logoutBtn" class="logout-btn">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>AI Health Assistant</h1>
+
+                <p>
+                    Get general healthcare information and guidance
+                </p>
+            </div>
+
+            <div class="profile">
+
+                <div class="profile-icon">
+                    👤
+                </div>
+
+                <div>
+                    <strong id="patientName">
+                        Patient
+                    </strong>
+
+                    <span>Patient</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="assistant-card">
+
+            <div class="assistant-header">
+
+                <div class="assistant-icon">
+                    🤖
+                </div>
+
+                <div>
+                    <h2>SmartCare AI Assistant</h2>
+
+                    <p>
+                        Ask general health-related questions
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div id="chatMessages" class="chat-messages">
+
+                <div class="message ai-message">
+
+                    <div class="message-avatar">
+                        🤖
+                    </div>
+
+                    <div class="message-content">
+
+                        <strong>SmartCare AI</strong>
+
+                        <p>
+                            Hello! 👋 I'm SmartCare AI.
+                            How can I help you with general
+                            healthcare information today?
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="input-area">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Type your health question here..."
+                    rows="2"
+                ></textarea>
+
+                <button id="sendBtn">
+                    Send ➤
+                </button>
+
+            </div>
+
+
+            <div class="disclaimer">
+
+                <strong>Important:</strong>
+
+                SmartCare AI provides general healthcare
+                information and is not a replacement for
+                a qualified doctor or professional medical advice.
+                For emergencies, seek immediate professional
+                medical help.
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="ai-chat.js"></script>
+
+</body>
+
+</html>

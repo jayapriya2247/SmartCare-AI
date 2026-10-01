@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 250px;
+    background: #166534;
+    color: white;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.logo h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: white;
+    padding: 13px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background: #15803d;
+}
+
+.logout-btn {
+    margin-top: auto;
+    border: none;
+    background: #14532d;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background: #166534;
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+
+/* ================= TOPBAR ================= */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.patient-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ================= UPLOAD SECTION ================= */
+
+.upload-section {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.section-header p {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* ================= FORM ================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #16a34a;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+
+/* ================= UPLOAD BUTTON ================= */
+
+.upload-btn {
+    width: 100%;
+    border: none;
+    background: #16a34a;
+    color: white;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.upload-btn:hover {
+    background: #15803d;
+}
+
+.upload-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+
+/* ================= MESSAGE ================= */
+
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    display: none;
+}
+
+.message.success {
+    display: block;
+    background: #dcfce7;
+    color: #166534;
+}
+
+.message.error {
+    display: block;
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* ================= RECORDS ================= */
+
+.records-section {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.records-header {
+    padding: 22px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.records-header h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.records-header p {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.refresh-btn {
+    border: none;
+    background: #dcfce7;
+    color: #15803d;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.refresh-btn:hover {
+    background: #bbf7d0;
+}
+
+.records-list {
+    padding: 20px 25px;
+}
+
+
+/* ================= RECORD CARD ================= */
+
+.record-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.record-item:last-child {
+    margin-bottom: 0;
+}
+
+.record-info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.record-info p {
+    color: #6b7280;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.record-type {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 9px;
+    border-radius: 15px;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.record-file {
+    padding: 9px 14px;
+    background: #16a34a;
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.record-file:hover {
+    background: #15803d;
+}
+
+
+/* ================= MESSAGES ================= */
+
+.loading-message,
+.empty-message {
+    text-align: center;
+    padding: 30px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.error-message {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fee2e2;
+    color: #991b1b;
+    font-size: 14px;
+}
+
+
+/* ================= DISCLAIMER ================= */
+
+.disclaimer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 18px;
+    border-radius: 10px;
+    background: #fff7ed;
+    color: #9a3412;
+    font-size: 12px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .record-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .sidebar-nav a {
+        white-space: nowrap;
+    }
+
+    .logout-btn {
+        margin-top: 20px;
+    }
+
+    .topbar {
+        flex-direction: column;
+    }
+
+    .upload-section,
+    .records-section {
+        width: 100%;
+    }
+
+    .records-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}

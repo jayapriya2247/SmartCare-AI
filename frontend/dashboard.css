@@ -1,0 +1,526 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8f7;
+    color: #263238;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 250px;
+
+    background: #ffffff;
+
+    border-right: 1px solid #e4e9e7;
+
+    padding: 25px 18px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 5px 8px 30px;
+}
+
+.brand-icon {
+    width: 45px;
+    height: 45px;
+
+    background: #e5f6f2;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+.brand h2 {
+    font-size: 18px;
+    color: #176b5b;
+}
+
+.brand span {
+    display: block;
+
+    font-size: 11px;
+
+    color: #8a9693;
+
+    margin-top: 3px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 13px 14px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    color: #5d6966;
+
+    font-size: 14px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background: #e7f6f2;
+    color: #176b5b;
+}
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logout-btn {
+    margin-top: auto;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #fff0f0;
+
+    color: #d84b4b;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: #ffe1e1;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    margin-left: 250px;
+
+    padding: 30px 40px;
+
+    max-width: 1500px;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.topbar h1 {
+    font-size: 28px;
+
+    color: #263f39;
+}
+
+.topbar p {
+    margin-top: 6px;
+
+    color: #7c8885;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 42px;
+    height: 42px;
+
+    background: #e4f5f1;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+.profile span {
+    font-size: 12px;
+
+    color: #8a9491;
+}
+
+
+/* =========================
+   WELCOME CARD
+========================= */
+
+.welcome-card {
+    background: linear-gradient(
+        135deg,
+        #176b5b,
+        #25927d
+    );
+
+    color: white;
+
+    border-radius: 16px;
+
+    padding: 28px 32px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.welcome-card h2 {
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+.welcome-card p {
+    max-width: 650px;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+    opacity: 0.9;
+}
+
+.welcome-icon {
+    font-size: 60px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-size: 19px;
+
+    color: #263f39;
+
+    margin-bottom: 17px;
+}
+
+
+/* =========================
+   PATIENT INFORMATION
+========================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.info-card {
+    background: white;
+
+    border: 1px solid #e5ebe9;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+.info-icon {
+    width: 42px;
+    height: 42px;
+
+    background: #e7f6f2;
+
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-card span {
+    display: block;
+
+    font-size: 12px;
+
+    color: #89928f;
+
+    margin-bottom: 5px;
+}
+
+.info-card strong {
+    display: block;
+
+    font-size: 14px;
+
+    color: #33443f;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   SERVICE CARDS
+========================= */
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.service-card {
+    background: white;
+
+    border: 1px solid #e5ebe9;
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    transition: 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 22px rgba(
+            0,
+            0,
+            0,
+            0.07
+        );
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+
+    background: #e7f6f2;
+
+    border-radius: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 17px;
+
+    margin-bottom: 8px;
+
+    color: #29453e;
+}
+
+.service-card p {
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #7c8885;
+
+    min-height: 62px;
+
+    margin-bottom: 15px;
+}
+
+.service-card button {
+    border: none;
+
+    background: #e7f6f2;
+
+    color: #176b5b;
+
+    padding: 9px 13px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.service-card button:hover {
+    background: #176b5b;
+
+    color: white;
+}
+
+
+/* =========================
+   EMERGENCY CARD
+========================= */
+
+.emergency-card {
+    border-left: 4px solid #e05252;
+}
+
+.emergency-card .service-icon {
+    background: #fff0f0;
+}
+
+
+/* =========================
+   DISCLAIMER
+========================= */
+
+.disclaimer {
+    background: #fffdf0;
+
+    border: 1px solid #f0e7b0;
+
+    color: #756b3b;
+
+    padding: 15px 18px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: static;
+
+        width: 100%;
+
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        padding: 20px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .welcome-card {
+        padding: 22px;
+    }
+
+    .welcome-icon {
+        display: none;
+    }
+
+    .info-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Medicine Reminders - SmartCare AI</title>
+
+    <link
+        rel="stylesheet"
+        href="medicine-reminders.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-container">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <h2>SmartCare AI</h2>
+
+                <p>Healthcare Assistant</p>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html">
+                    🏠 Dashboard
+                </a>
+
+                <a href="ai-chat.html">
+                    🤖 AI Health Assistant
+                </a>
+
+                <a href="appointments.html">
+                    📅 Appointments
+                </a>
+
+                <a href="medical-records.html">
+                    📄 Medical Records
+                </a>
+
+                <a
+                    href="medicine-reminders.html"
+                    class="active"
+                >
+                    💊 Medicine Reminders
+                </a>
+
+                <a href="#">
+                    🚨 Emergency Support
+                </a>
+
+            </nav>
+
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                🚪 Logout
+            </button>
+
+        </aside>
+
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>
+                        Medicine Reminders
+                    </h1>
+
+                    <p>
+                        Manage your medicine schedules
+                    </p>
+
+                </div>
+
+
+                <div class="patient-profile">
+
+                    <span>
+                        👤
+                    </span>
+
+                    <strong id="patientName">
+                        Patient
+                    </strong>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ================= ADD REMINDER ================= -->
+
+            <section class="reminder-form-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        ➕ Add Medicine Reminder
+                    </h2>
+
+                    <p>
+                        Add your medicine schedule
+                        for easy tracking.
+                    </p>
+
+                </div>
+
+
+                <form id="reminderForm">
+
+
+                    <!-- MEDICINE NAME -->
+
+                    <div class="form-group">
+
+                        <label for="medicineName">
+                            Medicine Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="medicineName"
+                            placeholder="Example: Paracetamol"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- DOSAGE -->
+
+                    <div class="form-group">
+
+                        <label for="dosage">
+                            Dosage
+                        </label>
+
+                        <input
+                            type="text"
+                            id="dosage"
+                            placeholder="Example: 500 mg"
+                        >
+
+                    </div>
+
+
+
+                    <!-- REMINDER TIME -->
+
+                    <div class="form-group">
+
+                        <label for="reminderTime">
+                            Reminder Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="reminderTime"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- START DATE -->
+
+                    <div class="form-group">
+
+                        <label for="startDate">
+                            Start Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="startDate"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- END DATE -->
+
+                    <div class="form-group">
+
+                        <label for="endDate">
+                            End Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="endDate"
+                        >
+
+                    </div>
+
+
+
+                    <!-- INSTRUCTIONS -->
+
+                    <div class="form-group">
+
+                        <label for="instructions">
+                            Instructions
+                        </label>
+
+                        <textarea
+                            id="instructions"
+                            rows="3"
+                            placeholder="Example: Take after food"
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        id="addReminderBtn"
+                        class="add-reminder-btn"
+                    >
+                        💊 Add Reminder
+                    </button>
+
+
+                    <div
+                        id="message"
+                        class="message"
+                    ></div>
+
+
+                </form>
+
+            </section>
+
+
+
+            <!-- ================= MY REMINDERS ================= -->
+
+            <section class="reminders-section">
+
+
+                <div class="reminders-header">
+
+                    <div>
+
+                        <h2>
+                            📋 My Medicine Reminders
+                        </h2>
+
+                        <p>
+                            Your active medicine schedules
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="refreshRemindersBtn"
+                        class="refresh-btn"
+                    >
+                        🔄 Refresh
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="remindersList"
+                    class="reminders-list"
+                >
+
+                    <div class="loading-message">
+                        Loading medicine reminders...
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= DISCLAIMER ================= -->
+
+            <section class="disclaimer">
+
+                <strong>
+                    ⚠️ Important:
+                </strong>
+
+                Medicine reminders are for
+                schedule management only.
+                Always follow the instructions
+                provided by your qualified healthcare
+                professional.
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="medicine-reminders.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - SmartCare AI</title>
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <div class="dashboard-container">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <h2>SmartCare AI</h2>
+
+                <p>Healthcare Assistant</p>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a
+                    href="dashboard.html"
+                    class="active"
+                >
+                    🏠 Dashboard
+                </a>
+
+
+                <a href="ai-chat.html">
+                    🤖 AI Health Assistant
+                </a>
+
+
+                <a href="appointments.html">
+                    📅 Appointments
+                </a>
+
+
+                <a href="medical-records.html">
+                    📄 Medical Records
+                </a>
+
+
+                <a href="medicine-reminders.html">
+                    💊 Medicine Reminders
+                </a>
+
+
+                <a href="emergency.html">
+                    🚨 Emergency Support
+                </a>
+
+            </nav>
+
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                🚪 Logout
+            </button>
+
+        </aside>
+
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+
+            <!-- ================= TOPBAR ================= -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>
+                        Patient Dashboard
+                    </h1>
+
+                    <p>
+                        Welcome back to SmartCare AI
+                    </p>
+
+                </div>
+
+
+                <div class="patient-profile">
+
+                    <span class="profile-icon">
+                        👤
+                    </span>
+
+                    <strong id="patientName">
+                        Patient
+                    </strong>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ================= WELCOME CARD ================= -->
+
+            <section class="welcome-card">
+
+                <div>
+
+                    <h2>
+                        Welcome,
+                        <span id="welcomeName">
+                            Patient
+                        </span>! 👋
+                    </h2>
+
+                    <p>
+                        Manage your healthcare information
+                        and access SmartCare AI services.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= SERVICES ================= -->
+
+            <section class="services-section">
+
+                <div class="section-title">
+
+                    <h2>
+                        Healthcare Services
+                    </h2>
+
+                    <p>
+                        Access your healthcare services
+                        from one place.
+                    </p>
+
+                </div>
+
+
+                <div class="service-grid">
+
+
+                    <!-- AI HEALTH ASSISTANT -->
+
+                    <a
+                        href="ai-chat.html"
+                        class="service-card"
+                    >
+
+                        <div class="service-icon">
+                            🤖
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                AI Health Assistant
+                            </h3>
+
+                            <p>
+                                Ask general health-related
+                                questions and get AI-powered
+                                information.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- APPOINTMENTS -->
+
+                    <a
+                        href="appointments.html"
+                        class="service-card"
+                    >
+
+                        <div class="service-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Appointments
+                            </h3>
+
+                            <p>
+                                Book and view your
+                                doctor appointments.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- MEDICAL RECORDS -->
+
+                    <a
+                        href="medical-records.html"
+                        class="service-card"
+                    >
+
+                        <div class="service-icon">
+                            📄
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Medical Records
+                            </h3>
+
+                            <p>
+                                Upload and manage your
+                                medical documents securely.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- MEDICINE REMINDERS -->
+
+                    <a
+                        href="medicine-reminders.html"
+                        class="service-card"
+                    >
+
+                        <div class="service-icon">
+                            💊
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Medicine Reminders
+                            </h3>
+
+                            <p>
+                                Manage medicine schedules
+                                and reminders.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- EMERGENCY SUPPORT -->
+
+                    <a
+                        href="emergency.html"
+                        class="service-card"
+                    >
+
+                        <div class="service-icon">
+                            🚨
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Emergency Support
+                            </h3>
+
+                            <p>
+                                Quickly access emergency
+                                support information.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= PATIENT INFORMATION ================= -->
+
+            <section class="patient-info-section">
+
+                <div class="section-title">
+
+                    <h2>
+                        Patient Information
+                    </h2>
+
+                    <p>
+                        Your registered account details
+                    </p>
+
+                </div>
+
+
+                <div class="patient-info-card">
+
+
+                    <div class="info-item">
+
+                        <span class="info-label">
+                            Name
+                        </span>
+
+                        <span
+                            id="infoName"
+                            class="info-value"
+                        >
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-label">
+                            Email
+                        </span>
+
+                        <span
+                            id="infoEmail"
+                            class="info-value"
+                        >
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-label">
+                            Phone
+                        </span>
+
+                        <span
+                            id="infoPhone"
+                            class="info-value"
+                        >
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-label">
+                            Role
+                        </span>
+
+                        <span
+                            id="infoRole"
+                            class="info-value"
+                        >
+                            patient
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= DISCLAIMER ================= -->
+
+            <section class="disclaimer">
+
+                <strong>
+                    ⚠️ Important:
+                </strong>
+
+                SmartCare AI provides general healthcare
+                information and assistance. It does not
+                replace professional medical advice,
+                diagnosis, or emergency medical services.
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

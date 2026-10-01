@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Emergency Support - SmartCare AI</title>
+
+    <link
+        rel="stylesheet"
+        href="emergency.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <h2>SmartCare AI</h2>
+
+                <p>Healthcare Assistant</p>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html">
+                    🏠 Dashboard
+                </a>
+
+                <a href="ai-chat.html">
+                    🤖 AI Health Assistant
+                </a>
+
+                <a href="appointments.html">
+                    📅 Appointments
+                </a>
+
+                <a href="medical-records.html">
+                    📄 Medical Records
+                </a>
+
+                <a href="medicine-reminders.html">
+                    💊 Medicine Reminders
+                </a>
+
+                <a
+                    href="emergency.html"
+                    class="active"
+                >
+                    🚨 Emergency Support
+                </a>
+
+            </nav>
+
+
+            <button
+                type="button"
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                🚪 Logout
+            </button>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>
+                        Emergency Support
+                    </h1>
+
+                    <p>
+                        Quick access to emergency information
+                    </p>
+
+                </div>
+
+
+                <div class="patient-profile">
+
+                    <span>
+                        👤
+                    </span>
+
+                    <strong id="patientName">
+                        Patient
+                    </strong>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- EMERGENCY ALERT -->
+
+            <section class="emergency-alert">
+
+                <div class="alert-icon">
+                    🚨
+                </div>
+
+                <div>
+
+                    <h2>
+                        Emergency Situation?
+                    </h2>
+
+                    <p>
+                        If you are experiencing a serious
+                        or life-threatening emergency,
+                        contact emergency medical services
+                        immediately.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- EMERGENCY CONTACT -->
+
+            <section class="emergency-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        📞 Emergency Contact
+                    </h2>
+
+                    <p>
+                        Use the appropriate emergency
+                        service for immediate assistance.
+                    </p>
+
+                </div>
+
+
+                <div class="emergency-card">
+
+                    <div class="emergency-card-icon">
+                        🚑
+                    </div>
+
+
+                    <div class="emergency-card-content">
+
+                        <h3>
+                            Emergency Medical Services
+                        </h3>
+
+                        <p>
+                            For urgent medical emergencies,
+                            contact emergency medical
+                            services immediately.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="tel:112"
+                        class="emergency-call-btn"
+                    >
+                        📞 Call 112
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- EMERGENCY INSTRUCTIONS -->
+
+            <section class="emergency-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        🆘 What To Do During An Emergency
+                    </h2>
+
+                </div>
+
+
+                <div class="instruction-grid">
+
+
+                    <div class="instruction-card">
+
+                        <div class="instruction-icon">
+                            1️⃣
+                        </div>
+
+                        <h3>
+                            Stay Calm
+                        </h3>
+
+                        <p>
+                            Stay as calm as possible
+                            and assess the situation.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="instruction-card">
+
+                        <div class="instruction-icon">
+                            2️⃣
+                        </div>
+
+                        <h3>
+                            Call For Help
+                        </h3>
+
+                        <p>
+                            Contact emergency services
+                            or ask someone nearby for help.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="instruction-card">
+
+                        <div class="instruction-icon">
+                            3️⃣
+                        </div>
+
+                        <h3>
+                            Follow Professional Advice
+                        </h3>
+
+                        <p>
+                            Follow instructions provided
+                            by emergency professionals.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="instruction-card">
+
+                        <div class="instruction-icon">
+                            4️⃣
+                        </div>
+
+                        <h3>
+                            Do Not Delay
+                        </h3>
+
+                        <p>
+                            Do not delay seeking professional
+                            medical assistance during a
+                            serious emergency.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- HOSPITAL SUPPORT -->
+
+            <section class="emergency-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        🏥 Hospital Support
+                    </h2>
+
+                    <p>
+                        For serious medical situations,
+                        visit the nearest appropriate
+                        healthcare facility.
+                    </p>
+
+                </div>
+
+
+                <div class="hospital-card">
+
+                    <div class="hospital-icon">
+                        🏥
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Nearest Hospital
+                        </h3>
+
+                        <p>
+                            If immediate medical attention
+                            is required, contact emergency
+                            services or proceed to the
+                            nearest hospital safely.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- IMPORTANT NOTICE -->
+
+            <section class="emergency-notice">
+
+                <strong>
+                    ⚠️ Important Safety Notice
+                </strong>
+
+                <p>
+                    SmartCare AI provides healthcare
+                    information and assistance. It does
+                    not replace emergency medical services,
+                    doctors, hospitals, or qualified
+                    healthcare professionals.
+                </p>
+
+                <p>
+                    In a life-threatening situation,
+                    seek immediate professional emergency
+                    medical assistance.
+                </p>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="emergency.js"></script>
+
+</body>
+
+</html>

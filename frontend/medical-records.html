@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Medical Records - SmartCare AI</title>
+
+    <link
+        rel="stylesheet"
+        href="medical-records.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <h2>SmartCare AI</h2>
+
+                <p>Healthcare Assistant</p>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html">
+                    🏠 Dashboard
+                </a>
+
+                <a href="ai-chat.html">
+                    🤖 AI Health Assistant
+                </a>
+
+                <a href="appointments.html">
+                    📅 Appointments
+                </a>
+
+                <a
+                    href="medical-records.html"
+                    class="active"
+                >
+                    📄 Medical Records
+                </a>
+
+                <a href="#">
+                    💊 Medicine Reminders
+                </a>
+
+                <a href="#">
+                    🚨 Emergency Support
+                </a>
+
+            </nav>
+
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                🚪 Logout
+            </button>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>Medical Records</h1>
+
+                    <p>
+                        Upload and manage your medical documents
+                    </p>
+
+                </div>
+
+
+                <div class="patient-profile">
+
+                    <span>👤</span>
+
+                    <strong id="patientName">
+                        Patient
+                    </strong>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- UPLOAD SECTION -->
+
+            <section class="upload-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        📤 Upload Medical Record
+                    </h2>
+
+                    <p>
+                        Upload your medical reports,
+                        prescriptions or other documents.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="medicalRecordForm"
+                    enctype="multipart/form-data"
+                >
+
+
+                    <div class="form-group">
+
+                        <label for="recordName">
+                            Record Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="recordName"
+                            placeholder="Example: Blood Test Report"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="recordType">
+                            Record Type
+                        </label>
+
+                        <select
+                            id="recordType"
+                            required
+                        >
+
+                            <option value="">
+                                Select record type
+                            </option>
+
+                            <option value="Lab Report">
+                                Lab Report
+                            </option>
+
+                            <option value="Prescription">
+                                Prescription
+                            </option>
+
+                            <option value="Scan Report">
+                                Scan Report
+                            </option>
+
+                            <option value="Medical Certificate">
+                                Medical Certificate
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="medicalFile">
+                            Select File
+                        </label>
+
+                        <input
+                            type="file"
+                            id="medicalFile"
+                            accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+                            required
+                        >
+
+                        <small>
+                            Supported formats:
+                            PDF, JPG, PNG, DOC, DOCX
+                        </small>
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        id="uploadBtn"
+                        class="upload-btn"
+                    >
+                        📤 Upload Record
+                    </button>
+
+
+                    <div
+                        id="message"
+                        class="message"
+                    ></div>
+
+
+                </form>
+
+            </section>
+
+
+
+            <!-- RECORDS SECTION -->
+
+            <section class="records-section">
+
+                <div class="records-header">
+
+                    <div>
+
+                        <h2>
+                            📋 My Medical Records
+                        </h2>
+
+                        <p>
+                            Your uploaded medical documents
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="refreshRecordsBtn"
+                        class="refresh-btn"
+                    >
+                        🔄 Refresh
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="recordsList"
+                    class="records-list"
+                >
+
+                    <div class="loading-message">
+                        Loading medical records...
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- DISCLAIMER -->
+
+            <section class="disclaimer">
+
+                <strong>⚠️ Important:</strong>
+
+                Medical records uploaded here are for
+                personal healthcare management.
+                SmartCare AI does not replace professional
+                medical advice.
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="medical-records.js"></script>
+
+</body>
+
+</html>
